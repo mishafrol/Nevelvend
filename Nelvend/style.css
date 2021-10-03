@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #FFFFFF;
+        
+  }
+/*/
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+/*/
+
+/*/Intro /*/
+
+.intro {
+  margin: 0;
+  width: 1900px;
+  height: 1145px;
+  /*height: 100vh; /* высота 100% экрана */
+  background: url("img/Intro_background.png") center no-repeat;
+  -webkit-background-size: cover; /* это хз что такое*/
+  background-size: cover; /*заполнение фоном всего экрана*/
+}
+
+  /*/header /*/
+
+.logo__container {
+  color: #FFF;
+  padding-left: 177px;
+  padding-top: 120px;
+  
+
+
+}
+
+.main-h {
+    margin-top: 140px;  
+    padding-left: 328px;
+    width: 1077px;
+    height: 255px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 72px;
+    line-height: 85px;
+    text-align: Left;
+    vertical-align: Top;
+    font-weight: 400;
+    
+}
+
+.pink {
+color: rgb(232, 162, 162);
+}
+.sale {
+margin-top: 48px;
+padding-left: 328px;
+width: 561;
+height: 82;
+line-height: 41px;
+text-align: Left;
+vertical-align: Top;
+font-weight: 400;
+}
+.blue {
+  color: rgb(162,203,232);
+}
