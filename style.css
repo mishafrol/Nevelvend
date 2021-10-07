@@ -1,0 +1,431 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #FFFFFF;   
+  }
+
+  @media screen and (max-width: 1349px) {
+    .main-h { 
+      
+      font-size: 60px;
+     
+      
+  }
+  }
+/*/
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+/*/
+
+/* Header */
+
+.header {
+  width: 100%;
+  position: absolute;/* все другие элементы не видят этот элемент */
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000; /* перемещение по оси Z */
+}
+
+.header_inner {
+  display: flex; /* все элемнты по горизонтали */
+ justify-content: space-between; /*Флексы равномерно распределяются по всей строке. Первый и последний элемент прижимаются к соответствующим краям контейнера. */
+ padding-left: 177px;
+ padding-right: 194px;
+}
+.header_logo {
+  color: #FFF;
+  padding-top: 120px; 
+  }
+
+.nav {
+  padding-top: 124px;
+  font-size: 18px;
+  position: relative;
+}
+.nav:after { /* что станет с ссылкой после нажания */
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  opacity: 40%;
+  background: radial-gradient(rgba(138, 138, 138, 1), rgba(138, 138, 138, 0.3),rgba(48, 48, 48, 1));
+  position: absolute;
+  /*top: 0;
+  left: 0;
+  z-index: 1;*/
+ }
+
+.nav_link {
+ display: inline-block;
+ vertical-align: top;
+ margin: 0 30px;
+ color: #FFFFFF;
+ font-weight: 600;
+ letter-spacing: 0.09em;
+ line-height: 25px;
+ text-decoration: none; /* без подчеркивания */
+ transition: color 0.1s linear; /* плавность изменения цвета при нажатии */
+ position: relative;
+}
+
+.nav_link:hover { /* что станет с ссылкой после наведения */
+  color: rgb(232, 204, 162);
+}
+
+.nav_link:after { /* что станет с ссылкой после нажания */
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  display: none;
+  background-color: #B6B6B6;
+  opacity: 35%;
+  position: absolute;
+  top: 29;
+  left: 0;
+  z-index: 1;
+}
+
+.nav_link:hover:after {
+  display: block;
+}
+
+/*/Intro /*/
+
+.intro {
+  width: 100%;
+  height: auto; 
+  background: url("img/Intro_background.png") center no-repeat;
+  -webkit-background-size: cover; /* это хз что такое*/
+  background-size: cover; /*заполнение фоном всего экрана*/
+  padding-bottom: 300px;
+}
+
+
+.main-h { 
+    padding-top: 297px; 
+    padding-left: 328px;
+    /* width: 1077px; */
+    height: 255px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 72px;
+    line-height: 85px;
+    text-align: Left;
+    vertical-align: Top;
+    font-weight: 400;
+    
+}
+
+.pink {
+color: rgb(232, 162, 162);
+}
+.sale {
+margin-top: 48px;
+padding-left: 332px;
+width: 561;
+height: 82;
+line-height: 41px;
+text-align: Left;
+vertical-align: Top;
+font-weight: 400;
+}
+.blue {
+  color: rgb(162,203,232);
+}
+
+.intro_button {
+ display: flex;
+ padding-left: 332px;
+ margin-top: 104px;
+
+}
+
+.sale_button {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 300;
+  font-style: light;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 26 36;
+  border: solid 2px rgba(138, 138, 138, 0.40);
+  border-radius: 50%;
+  margin-right: 50px;
+
+}
+
+.info_button {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 300;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+/* Вторая страница */
+
+.about {
+  margin: 0px;
+  /*position: absolute;
+  top: 1143px;*/
+  background: url("img/About.png") center no-repeat;
+  width: 100%;
+  height: auto; 
+  -webkit-background-size: cover; /* это хз что такое*/
+  background-size: cover; /*заполнение фоном всего экрана*/
+  /*background-color:rgb(187, 33, 33) ;*/
+  /* position: relative; */
+  padding-bottom: 70px;
+}
+
+.about_inner {
+  /*position: absolute;
+  top: 1202px;
+  left: 410px;
+  z-index: 2;*/
+  width: 100%;
+  max-width:1200px;
+  margin: 0 auto;
+  padding-top: 57px;
+  position: relative;
+  /* padding-left: 410px;
+  padding-top: ; */
+}
+
+.sup_ellipse {
+  position: relative;
+  z-index: 1;
+}
+.ellipse {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+.title {
+  /* position: relative; */
+  /* position: absolute; */
+  /* left: 410px; */
+  z-index: 2;
+  font-family: rubik;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 75.84px;
+  margin-bottom: 20px;
+}
+
+.inexpensive {
+  top: 1202px;
+}
+
+.p {
+  width: 689px;
+  font-size: 22px;
+  letter-spacing: 0.03em;
+  color: #EAEAEA;
+  line-height: 30px;
+  margin-bottom: 220px;
+}
+
+.quality {
+  top: 1615px;
+}
+.manufacture {
+  top: 2022px;
+}
+
+.ellipse_2 {
+  position: absolute;
+  top: -123px;
+  /* top: 1020px;
+  left: 410px;
+  z-index: 1; */
+  width: 453px;
+  height: 453px;
+  border: solid 1px rgba(138, 138, 138, 1);
+  border-radius: 50%;
+  padding: 46px;
+  opacity: .45;
+}
+
+.ellipse_3 {
+  /* position: absolute; */
+  /* top: 1066.63px;
+  left: 456.63px;
+  z-index: 1; */
+  /* width: 359.74px;
+  height: 359.74px; */
+  padding: 46px;
+  width: calc(100% - 92px);
+  height: calc(100% - 92px);
+  border: solid 1px rgba(138, 138, 138, 1);
+  border-radius: 50%;
+}
+
+.ellipse_4 {
+  /* position: absolute; */
+  /* top: 1109.93px;
+  left: 499.93px;
+  z-index: 1; */
+  /* width: 273.13px;
+  height: 273.13px; */
+  width: 100%;
+  height: 100%;
+  border: solid 1px rgba(138, 138, 138, 1);
+  border-radius: 50%;
+}
+
+.ellipse_5 {
+  /* position: absolute; */
+  /* top: 1149.9px;
+  left: 539.9px;
+  z-index: 1; */
+  /* width: 193.19px;
+  height: 193.19px; */
+  width: 100%;
+  height: 100%;
+  border: solid 1px rgba(138, 138, 138, 1);
+  border-radius: 50%;
+}
+
+.ellipse_6 {
+  /* position: absolute; */
+  /* top: 1183.21px;
+  left: 573.21px;
+  z-index: 1; */
+  /* width: 126.57;
+  height: 126.57; */
+  width: 100%;
+  height: 100%;
+  border: solid 1px rgba(138, 138, 138, 1);
+  border-radius: 50%;
+}
+
+.ellipse_7 {
+  /* position: absolute;
+  top: 1562px;
+  left: 410px;
+  z-index: 1; */
+  width: 453px;
+  height: 305px;
+  border: solid 1px rgba(138, 138, 138, 0.45);
+  border-radius: 50%;
+}
+
+.ellipse_8 {
+  /* position: absolute; */
+  width: 375px;
+  height: 253px;
+  /* left: 449px;
+  top: 1588px;
+  z-index: 1; */
+  border: solid 1px rgba(138, 138, 138, 0.45);
+  border-radius: 50%;
+}
+
+.ellipse_9 {
+  /* position: absolute;
+  top: 1617px;
+  left: 491px;
+  z-index: 1; */
+  width: 291px;
+  height: 197px;
+  border: solid 1px rgba(138, 138, 138, 0.45);
+  border-radius: 50%;
+}
+
+.ellipse_10 {
+  /* position: absolute;
+  top: 1647px;
+  left: 535px;
+  z-index: 1; */
+  width: 203px;
+  height: 137px;
+  border: solid 1px rgba(138, 138, 138, 0.45);
+  border-radius: 50%;
+}
+
+.ellipse_11 {
+  /* position: absolute;
+  top: 1673px;
+  left: 573px;
+  z-index: 1; */
+  width: 127;
+  height: 85;
+  border: solid 1px rgba(138, 138, 138, 0.45);
+  border-radius: 50%;
+}
+
+.ellipse_12 {
+  /* position: absolute;
+  top: 1957px;
+  left: 410px;
+  z-index: 1; */
+  width: 453px;
+  height: 453px;
+  border: solid 1px rgba(138, 138, 138, 1);
+  border-radius: 50%;
+}
+
+.ellipse_13 {
+  /* position: absolute;
+  top: 2003.63px;
+  left: 456.63px;
+  z-index: 1; */
+  width: 359.74px;
+  height: 359.74px;
+  border: solid 1px rgba(138, 138, 138, 1);
+  border-radius: 50%;
+}
+
+.ellipse_14 {
+  /* position: absolute;
+  top: 2046.93px;
+  left: 499.93px;
+  z-index: 1; */
+  width: 273.13px;
+  height: 273.13px;
+  border: solid 1px rgba(138, 138, 138, 1);
+  border-radius: 50%;
+}
+
+.ellipse_15 {
+  /* position: absolute;
+  top: 2086.9px;
+  left: 539.9px;
+  z-index: 1; */
+  width: 193.19px;
+  height: 193.19px;
+  border: solid 1px rgba(138, 138, 138, 1);
+  border-radius: 50%;
+}
+
+.ellipse_16 {
+  /* position: absolute;
+  top: 2120.21px;
+  left: 573.21px;
+  z-index: 1; */
+  width: 126.57;
+  height: 126.57;
+  border: solid 1px rgba(138, 138, 138, 1);
+  border-radius: 50%;
+}
+
+
+/* Третья страница */ 
+
+.buy {
+  margin: 0;
+  background: url("img/sale.png") center no-repeat;
+  width: 100%;
+  height: auto;
+  -webkit-background-size: cover; /* это хз что такое*/
+  background-size: cover; /*заполнение фоном всего экрана*/
+}
