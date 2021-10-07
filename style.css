@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Noto Sans Display', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.6;
     color: #FFFFFF;   
   }
@@ -12,7 +12,9 @@ body {
     box-sizing: border-box;
   }
 /*/
-
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
 /* Header */
 
 .header {
@@ -22,22 +24,28 @@ body {
   right: 0;
   left: 0;
   z-index: 1000; /* перемещение по оси Z */
+  padding-top: 50px;
 }
-
+.container_header {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 .header_inner {
   display: flex; /* все элемнты по горизонтали */
  justify-content: space-between; /*Флексы равномерно распределяются по всей строке. Первый и последний элемент прижимаются к соответствующим краям контейнера. */
- padding-left: 177px;
- padding-right: 194px;
+ /*padding-left: 177px;
+ padding-right: 194px;*/
+ align-items: center;
 }
 .header_logo {
   color: #FFF;
-  padding-top: 120px; 
+  /* padding-top: 70px;  */
   }
 
 .nav {
-  padding-top: 124px;
-  font-size: 18px;
+  /* padding-top: 80px; */
+  font-size: 16px;
   position: relative;
 }
 .nav:after { /* что станет с ссылкой после нажания */
@@ -48,15 +56,15 @@ body {
   opacity: 40%;
   background: radial-gradient(rgba(138, 138, 138, 1), rgba(138, 138, 138, 0.3),rgba(48, 48, 48, 1));
   position: absolute;
-  /*top: 0;
+  top: 29;
   left: 0;
-  z-index: 1;*/
+  z-index: 1;
  }
 
 .nav_link {
  display: inline-block;
  vertical-align: top;
- margin: 0 30px;
+ margin: 0 20px;
  color: #FFFFFF;
  font-weight: 600;
  letter-spacing: 0.09em;
@@ -92,21 +100,27 @@ body {
 
 .intro {
   width: 100%;
-  height: 1145px; 
+  height: 100vh; /*100% высоты экрана посетителя*/ 
   background: url("img/Intro_background.png") center no-repeat;
   -webkit-background-size: cover; /* это хз что такое*/
   background-size: cover; /*заполнение фоном всего экрана*/
+  /* padding-bottom: 269px; */
+  padding-top: 210px;
+}
+.container {
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto;
 }
 
-
 .main-h { 
-    padding-top: 297px; 
-    padding-left: 328px;
+     
+    /* padding-left: 328px;
     width: 1077px;
-    height: 255px;
+    height: 255px; */
     font-family: 'Rubik', sans-serif;
-    font-size: 72px;
-    line-height: 85px;
+    font-size: 48px;
+    line-height: 100%;
     text-align: Left;
     vertical-align: Top;
     font-weight: 400;
@@ -117,8 +131,8 @@ body {
 color: rgb(232, 162, 162);
 }
 .sale {
-margin-top: 48px;
-padding-left: 332px;
+margin-top: 40px;
+/* padding-left: 332px; */
 width: 561;
 height: 82;
 line-height: 41px;
@@ -132,14 +146,14 @@ font-weight: 400;
 
 .intro_button {
  display: flex;
- padding-left: 332px;
- margin-top: 104px;
+ /* padding-left: 332px; */
+ margin-top: 80px;
 
 }
 
 .sale_button {
-  font-size: 24px;
-  line-height: 33px;
+  /* font-size: 24px; */
+  /* line-height: 33px; */
   font-weight: 300;
   font-style: light;
   text-decoration: none;
@@ -152,8 +166,8 @@ font-weight: 400;
 }
 
 .info_button {
-  font-size: 24px;
-  line-height: 33px;
+  /* font-size: 24px; */
+  /* line-height: 33px; */
   font-weight: 300;
   text-decoration: none;
   color: #FFFFFF;
@@ -162,22 +176,28 @@ font-weight: 400;
 /* Вторая страница */
 
 .about {
+  padding-top: 59px;
+  padding-bottom: 70px;
   margin: 0px;
-  /*position: absolute;
-  top: 1143px;*/
   background: url("img/About.png") center no-repeat;
   width: 100%;
-  height: 1134px;
+  /* height: 100%; */
   -webkit-background-size: cover; /* это хз что такое*/
   background-size: cover; /*заполнение фоном всего экрана*/
   /*background-color:rgb(187, 33, 33) ;*/
 }
 
+.container_about {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+
+}
 .about_inner {
-  position: absolute;
+  /* position: absolute;
   top: 1202px;
   left: 410px;
-  z-index: 2;
+  z-index: 2; */
 }
 
 .title {
@@ -186,30 +206,24 @@ font-weight: 400;
   z-index: 1;*/
   font-family: rubik;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 36px;
   line-height: 75.84px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-.inexpensive {
-  top: 1202px;
-}
 
 .p {
-  width: 689px;
+  width: 640px;
   font-size: 22px;
   letter-spacing: 0.03em;
   color: #EAEAEA;
-  line-height: 30px;
-  margin-bottom: 220px;
+  line-height: 24px;
+  margin-bottom: 120px;
 }
+.p:last-child {
+  margin-bottom: 0px;
+} 
 
-.quality {
-  top: 1615px;
-}
-.manufacture {
-  top: 2022px;
-}
 
 .ellipse_2 {
   position: absolute;
@@ -381,9 +395,17 @@ font-weight: 400;
 
 .buy {
   margin: 0;
+  padding-top: 50px;
+  padding-bottom: 30px;
   background: url("img/sale.png") center no-repeat;
   width: 100%;
-  height: 1134px;
+  height: 100vh;
   -webkit-background-size: cover; /* это хз что такое*/
   background-size: cover; /*заполнение фоном всего экрана*/
+}
+
+.buy_nav {
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
 }
